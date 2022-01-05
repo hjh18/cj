@@ -1,0 +1,101 @@
+<!DOCTYPE html
+<html>
+<head>
+ <title></title>
+ <style type="text/css">
+ body{
+ 	background: url(cj2.jpg);
+ 	background-repeat: no-repeat;
+	background-size: cover;
+ }
+ .cc{
+  width: 440px;
+  height: 440px;
+  border: 0px solid blue;
+  margin: 50px auto;
+ }
+ .a1{
+  width: 120px;
+  height: 120px;
+  border: 1px solid red;
+  float: left;
+  margin: 12px;
+  text-align: center;
+  line-height: 110px;
+  color: blue;
+  font-weight: bold;
+  font-size: 17px;
+ }
+ #btn{
+ 	cursor: pointer;
+ }
+
+marquee{
+
+width:px;
+  width:400px;
+      height: 500px;
+      position: absolute;
+      right:50px;
+      bottom: 50px;
+      border: px solid blue;
+  background-image: url("3.jpg");
+}
+ </style>
+</head>
+<body>
+<div class="cc">
+ <div class="a1">外星人笔记本</div>
+ <div class="a1">苹果手机</div>
+ <div class="a1">华硕显卡</div>
+ <div class="a1">高配置电脑</div>
+  <div class="a1" style="color:red;" id="btn">开始</div>
+  <div class="a1" style="white-space: nowrap">50元200G流量</div>
+  <div class="a1">智能手表</div>
+  <div class="a1">洗手液</div>
+  <div class="a1">漱口水</div>
+</div>
+<marquee direction="up" id="mq">
+<p>中奖名单</p>
+<p>张三：华硕显卡</p>
+<p>李四：外星人笔记本</p>
+</marquee>
+<script type="text/javascript">
+var x =document.querySelectorAll('.a1');
+var y =[x[0],x[1],x[2],x[5],x[8],x[7],x[6],x[3]];
+console.log(x);
+var i=0;
+var name='';
+var jp = '';
+btn.onclick = cj;
+function cj() {
+name = prompt('请输入用户名：');
+	var v = setInterval(`
+
+for(var k=0;k<y.length; k++){
+  y[k].style.background = '';
+}
+
+  y[i].style.background ='#159edc';
+  jp = y[i].innerHTML;
+  console.log(jp);
+  i++;
+if(i>y.length-1){
+  i=0;
+}
+  `,200); 
+
+	var time = Math.random()*(15000-6000+1)+6000;
+
+	setTimeout(`
+	clearInterval(${v});
+  //把中奖信息放到marquee标签内
+    var str = name+': 恭喜中了'+jp+'!'
+    // alert(str);
+    mq.innerHTML += "<p>"+str+"</p>"
+		`,time);
+
+}
+</script>
+</body>
+</html>
